@@ -3,40 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Order | Sugar Petal</title>
+  <title>Sugar Petal | Order</title>
 
   <style>
-    /* ===== COLOR PALETTE (MATCHES INDEX) ===== */
-    :root {
-      --petal-pink: #f3b6c4;
-      --peach-pink: #f7d6de;
-      --background: #fff7f2;
-      --text-dark: #4a2c2a;
-      --card-bg: #ffffff;
-    }
-
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: var(--background);
-      color: var(--text-dark);
+      background: #fff7f2; /* peach background */
+      color: #4a2c2a;
     }
 
     header {
-      background: var(--petal-pink);
+      background: #f3b6c4; /* petal pink */
       padding: 2.5rem 1rem;
       text-align: center;
     }
 
     header img {
-      width: 150px;
+      width: 140px;
       height: auto;
       border-radius: 50%;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     nav {
-      background: var(--peach-pink);
+      background: #f7d6de; /* peach pink */
       padding: 1rem;
       text-align: center;
     }
@@ -44,7 +35,7 @@
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: var(--text-dark);
+      color: #4a2c2a;
       font-weight: bold;
     }
 
@@ -52,11 +43,11 @@
       max-width: 900px;
       margin: auto;
       padding: 2rem;
-      background: var(--card-bg);
+      background: white;
     }
 
     h2 {
-      border-bottom: 2px solid var(--petal-pink);
+      border-bottom: 2px solid #f3b6c4;
       padding-bottom: 0.5rem;
       font-family: Georgia, serif;
     }
@@ -75,33 +66,35 @@
       font-family: inherit;
     }
 
-    button {
-      background: var(--petal-pink);
-      color: var(--text-dark);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 25px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
+    /* Agreement line alignment */
     .agreement {
       display: flex;
       align-items: flex-start;
       gap: 0.5rem;
       margin-top: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     .agreement input {
+      width: auto;
       margin-top: 0.2rem;
+    }
+
+    button {
+      background: #f3b6c4;
+      color: #4a2c2a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 1.5rem;
     }
 
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: var(--peach-pink);
+      background: #f7d6de;
       margin-top: 2rem;
       font-size: 0.9rem;
     }
@@ -124,60 +117,67 @@
 </nav>
 
 <main>
-  <h2>Place an Order</h2>
+  <section>
+    <h2>Place an Order</h2>
 
-  <form>
-    <p>
-      <label>
-        Name:<br>
-        <input type="text" required>
-      </label>
+    <form>
+      <p>
+        <label>
+          Name:<br />
+          <input type="text" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Email:<br />
+          <input type="email" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Order Details:<br />
+          <textarea rows="5" required></textarea>
+        </label>
+      </p>
+
+      <p>
+        <label>
+          Delivery Address:<br />
+          <textarea rows="3" required></textarea>
+        </label>
+      </p>
+
+      <!-- Agreement -->
+      <div class="agreement">
+        <input type="checkbox" required />
+        <label>
+          I understand that orders must be placed at least 48 hours in advance.
+          Once my order is confirmed, all payments are non-refundable.
+          No cancellations, returns, or refunds are accepted.
+        </label>
+      </div>
+
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <p style="margin-top: 1.5rem;">
+      <strong>Payment:</strong><br>
+      Venmo only – <strong>@SugarPetalBaking</strong><br>
+      Please include your name and order item in the payment note.<br>
+      Orders are confirmed once payment is received.
     </p>
-
-    <p>
-      <label>
-        Email:<br>
-        <input type="email" required>
-      </label>
-    </p>
-
-    <p>
-      <label>
-        Order Details:<br>
-        <textarea rows="5" required></textarea>
-      </label>
-    </p>
-
-    <p>
-      <label>
-        Delivery Address:<br>
-        <textarea rows="3" required></textarea>
-      </label>
-    </p>
-
-    <!-- AGREEMENT (ALIGNED + NOT BOLD) -->
-    <div class="agreement">
-      <input type="checkbox" required>
-      <span>
-        I understand that orders must be placed at least 48 hours in advance.
-        Once my order is confirmed, all payments are non-refundable.
-        No cancellations, returns, or refunds are accepted.
-      </span>
-    </div>
-
-    <button type="submit">Submit Order</button>
-  </form>
-
-  <p style="margin-top:1.5rem;">
-    <strong>Payment:</strong><br>
-    Venmo only – <strong>@SugarPetalBaking</strong><br>
-    Please include your name and order item in the payment note.<br>
-    Orders are confirmed once payment is received.
-  </p>
+  </section>
 </main>
 
 <footer>
-  © 2025 Sugar Petal Baking
+  <p>
+    Orders must be placed at least <strong>48 hours in advance</strong>.<br>
+    All sales are final. Payments are non-refundable once an order is confirmed.
+  </p>
+
+  <p>© 2025 Sugar Petal Baking</p>
 </footer>
 
 </body>
