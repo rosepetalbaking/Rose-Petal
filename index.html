@@ -56,13 +56,17 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#">About</a>
     <a href="#menu">Menu</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <main>
-    <section id="about">
+   <p>
+     Home-based online bakery • Serving <strong>Harrisonburg, Virginia</strong> • Local delivery only
+
+</p>
+ <section id="about">
       <h2>About</h2>
       <p>
        At Sugar Petal, we create handmade desserts inspired mostly by Middle Eastern flavors and traditions, blended with a modern, delicate touch. Every treat is baked in small batches using quality ingredients, traditional techniques, and plenty of care—never mass-produced.
@@ -146,14 +150,62 @@ Soft, braided sweet bread with a light, aromatic flavor and delicate texture.
 Ramazan Pidesi
 Soft, airy flatbread with a golden crust, decorated with sesame seeds and black seeds.
     </section>
+<section id="order">
+  <h2>Place an Order</h2>
+
+  <form>
+    <p>
+      <label>
+        Name:<br />
+        <input type="text" required />
+      </label>
+    </p>
+
+    <p>
+      <label>
+        Email:<br />
+        <input type="email" required />
+      </label>
+    </p>
+
+    <p>
+      <label>
+        Order Details:<br />
+        <textarea rows="5" required></textarea>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        Delivery Address:<br />
+        <textarea rows="3" required></textarea>
+      </label>
+    </p>
+
+    <button type="submit">Submit Order</button>
+  </form>
+
+  <p>
+    <em>
+      Payment accepted via <strong>Venmo</strong>.<br />
+      Local pickup unavailable.<br />
+      Delivery only.
+    </em>
+  </p>
+</section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Email: sugarpetal@example.com<br />
-        Local pickup available
-      </p>
-    </section>
+  <h2>Contact</h2>
+  <p>
+    Email: sugarpetal@example.com<br />
+    Payment accepted via <strong>Venmo</strong><br />
+    Local pickup unavailable<br />
+    Delivery only
+  </p>
+</section>
+
+
+    
   </main>
 
   <footer>
