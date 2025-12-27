@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,25 +9,25 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #FFF1EB; /* soft peach background */
+      background: #FFF1EB;
       color: #4a2c2a;
     }
 
     header {
-      background: #F6C1CF; /* petal pink */
-      padding: 3rem 1rem;
+      background: #F6C1CF;
+      padding: 2rem 1rem; /* reduced padding */
       text-align: center;
     }
 
     header img {
-      width: 220px; /* BIGGER LOGO */
+      width: 140px; /* ✅ MATCHING SIZE */
       height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       border-radius: 50%;
     }
 
     nav {
-      background: #FAD4C0; /* peach pink */
+      background: #FAD4C0;
       padding: 1rem;
       text-align: center;
     }
@@ -37,7 +37,6 @@
       text-decoration: none;
       color: #4a2c2a;
       font-weight: bold;
-      font-size: 1rem;
     }
 
     nav a:hover {
@@ -47,12 +46,12 @@
     main {
       max-width: 900px;
       margin: auto;
-      padding: 2.5rem 2rem;
+      padding: 2rem;
       background: white;
     }
 
     h2 {
-      border-bottom: 2px solid #E7A9B7; /* blush accent */
+      border-bottom: 2px solid #E7A9B7;
       padding-bottom: 0.5rem;
       font-family: Georgia, serif;
     }
@@ -69,53 +68,44 @@
 
 <body>
 
-  <header>
-    <!-- LOGO -->
-    <img src="logo.png" alt="Sugar Petal Logo">
+<header>
+  <img src="logo.png" alt="Sugar Petal Logo">
+  <h1>Sugar Petal</h1>
+  <p>Handmade Middle Eastern Sweets</p>
+</header>
 
-    <h1>Sugar Petal</h1>
-    <p>Handmade Middle Eastern Sweets</p>
-  </header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="order.html">Order</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="order.html">Order</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<main>
+  <p>
+    Home-based online bakery • Serving <strong>Harrisonburg, Virginia</strong> • Local delivery only
+  </p>
 
-  <main>
+  <section>
+    <h2>About Sugar Petal</h2>
     <p>
-      Home-based online bakery • Serving <strong>Harrisonburg, Virginia</strong> • Local delivery only
-    </p>
-
-    <section>
-      <h2>About Sugar Petal</h2>
-
-      <p>
-        Sugar Petal is a home-based bakery specializing in handmade Middle Eastern–inspired desserts,
-        crafted in small batches with care and tradition. Each item is made to order using quality
-        ingredients and classic techniques.
-      </p>
-
-      <p>
-        We proudly offer <strong>local delivery only</strong> to ensure freshness, quality, and
-        attention to detail from our kitchen to your door.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>
-      Orders must be placed at least <strong>48 hours in advance</strong>.<br>
-      All sales are final. Payments are non-refundable once an order is confirmed.
+      Sugar Petal is a home-based bakery specializing in handmade Middle Eastern–inspired desserts,
+      crafted in small batches with care and tradition.
     </p>
 
     <p>
-      © 2025 Sugar Petal Baking
+      We offer <strong>local delivery only</strong> to ensure freshness and quality.
     </p>
-  </footer>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Orders must be placed at least <strong>48 hours in advance</strong>.<br>
+    All sales are final. Payments are non-refundable once confirmed.
+  </p>
+  <p>© 2025 Sugar Petal Baking</p>
+</footer>
 
 </body>
 </html>
-
