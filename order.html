@@ -3,31 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sugar Petal | Order</title>
+  <title>Order | Sugar Petal</title>
 
   <style>
+    /* ===== COLOR PALETTE (MATCHES INDEX) ===== */
+    :root {
+      --petal-pink: #f3b6c4;
+      --peach-pink: #f7d6de;
+      --background: #fff7f2;
+      --text-dark: #4a2c2a;
+      --card-bg: #ffffff;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #fff7f2;        /* cream background */
-      color: #4a2c2a;             /* cocoa brown text */
+      background: var(--background);
+      color: var(--text-dark);
     }
 
     header {
-      background: #f3b6c4;        /* petal pink */
+      background: var(--petal-pink);
       padding: 2.5rem 1rem;
       text-align: center;
     }
 
     header img {
-      width: 140px;
+      width: 150px;
       height: auto;
-      margin-bottom: 1rem;
       border-radius: 50%;
+      margin-bottom: 1rem;
     }
 
     nav {
-      background: #FAD4C0
+      background: var(--peach-pink);
       padding: 1rem;
       text-align: center;
     }
@@ -35,7 +44,7 @@
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #4a2c2a;
+      color: var(--text-dark);
       font-weight: bold;
     }
 
@@ -43,11 +52,11 @@
       max-width: 900px;
       margin: auto;
       padding: 2rem;
-      background: #ffffff;
+      background: var(--card-bg);
     }
 
     h2 {
-      border-bottom: 2px solid #f3b6c4;
+      border-bottom: 2px solid var(--petal-pink);
       padding-bottom: 0.5rem;
       font-family: Georgia, serif;
     }
@@ -66,30 +75,33 @@
       font-family: inherit;
     }
 
-    .agree-box {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
     button {
-      background: #f3b6c4;
-      color: #4a2c2a;
+      background: var(--petal-pink);
+      color: var(--text-dark);
       border: none;
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       border-radius: 25px;
       cursor: pointer;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .agreement {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .agreement input {
+      margin-top: 0.2rem;
     }
 
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: #f7d6de;
+      background: var(--peach-pink);
       margin-top: 2rem;
       font-size: 0.9rem;
     }
@@ -116,37 +128,35 @@
 
   <form>
     <p>
-      <label>Name:<br>
+      <label>
+        Name:<br>
         <input type="text" required>
       </label>
     </p>
 
     <p>
-      <label>Email:<br>
+      <label>
+        Email:<br>
         <input type="email" required>
       </label>
     </p>
 
     <p>
-      <label>Order Details:<br>
+      <label>
+        Order Details:<br>
         <textarea rows="5" required></textarea>
       </label>
     </p>
 
     <p>
-      <label>Delivery Address:<br>
+      <label>
+        Delivery Address:<br>
         <textarea rows="3" required></textarea>
       </label>
     </p>
 
-    <p>
-      <strong>Payment:</strong><br>
-      Venmo only – <strong>@SugarPetalBaking</strong><br>
-      Please include your name and order item in the payment note.<br>
-      Orders are confirmed once payment is received.
-    </p>
-
-    <div class="agree-box">
+    <!-- AGREEMENT (ALIGNED + NOT BOLD) -->
+    <div class="agreement">
       <input type="checkbox" required>
       <span>
         I understand that orders must be placed at least 48 hours in advance.
@@ -157,6 +167,13 @@
 
     <button type="submit">Submit Order</button>
   </form>
+
+  <p style="margin-top:1.5rem;">
+    <strong>Payment:</strong><br>
+    Venmo only – <strong>@SugarPetalBaking</strong><br>
+    Please include your name and order item in the payment note.<br>
+    Orders are confirmed once payment is received.
+  </p>
 </main>
 
 <footer>
