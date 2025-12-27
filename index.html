@@ -15,21 +15,15 @@
 
     header {
       background: #f3b6c4;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
 
-    /* LOGO FIX */
-    .logo {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
+    header img {
+      width: 180px;          /* LOGO SIZE — increase if you want bigger */
+      height: auto;
+      margin-bottom: 1rem;
       border-radius: 50%;
-      display: block;
-      margin: 0 auto 1rem auto;
-      background: white;
-      padding: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     nav {
@@ -47,7 +41,7 @@
 
     main {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: auto;
       padding: 2rem;
       background: white;
     }
@@ -60,7 +54,7 @@
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       background: #f7d6de;
       margin-top: 2rem;
       font-size: 0.9rem;
@@ -72,14 +66,14 @@
 
 <header>
   <!-- LOGO -->
-  <img src="logo.png" alt="Sugar Petal Logo" class="logo">
+  <img src="logo.png" alt="Sugar Petal Logo">
 
   <h1>Sugar Petal</h1>
   <p>Handmade Middle Eastern Sweets</p>
 </header>
 
 <nav>
-  <a href="index.html">About</a>
+  <a href="index.html">Home</a>
   <a href="menu.html">Menu</a>
   <a href="order.html">Order</a>
   <a href="contact.html">Contact</a>
@@ -87,4 +81,34 @@
 
 <main>
   <p>
-    Home-based online bakery • Se
+    Home-based online bakery • Serving <strong>Harrisonburg, Virginia</strong> • Local delivery only
+  </p>
+
+  <section>
+    <h2>About Sugar Petal</h2>
+    <p>
+      Sugar Petal is a home-based bakery specializing in handmade Middle Eastern–inspired desserts,
+      crafted in small batches with care and tradition. Each item is made to order using quality
+      ingredients and classic techniques.
+    </p>
+
+    <p>
+      We offer <strong>local delivery only</strong> to ensure freshness and attention to detail from
+      our kitchen to your door.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Orders must be placed at least <strong>48 hours in advance</strong>.<br>
+    All sales are final. Payments are non-refundable once an order is confirmed.
+  </p>
+
+  <p>
+    © 2025 Sugar Petal Baking
+  </p>
+</footer>
+
+</body>
+</html>
