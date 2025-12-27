@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sugar Petal | Order</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -15,13 +15,8 @@
 
     header {
       background: #f3b6c4;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-family: Georgia, serif;
     }
 
     nav {
@@ -60,13 +55,15 @@
       font-weight: bold;
     }
 
-    input,
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
     textarea {
       width: 100%;
       padding: 0.6rem;
       margin-top: 0.4rem;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 4px;
       font-family: inherit;
     }
 
@@ -74,33 +71,28 @@
       resize: vertical;
     }
 
-    /* AGREEMENT SECTION */
+    /* AGREEMENT FIX — MATCHES PAGE WIDTH & ALIGNMENT */
     .agreement {
+      margin-top: 1.5rem;
       display: flex;
       align-items: flex-start;
       gap: 0.6rem;
-      margin-top: 1.5rem;
       font-size: 0.95rem;
     }
 
-    .agreement input {
-      margin-top: 0.25rem;
+    .agreement input[type="checkbox"] {
+      margin-top: 0.2rem;
     }
 
     button {
-      margin-top: 1.5rem;
-      padding: 0.7rem 1.5rem;
       background: #f3b6c4;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
       color: #4a2c2a;
-    }
-
-    button:hover {
-      background: #e7a8b7;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 1.5rem;
     }
 
     footer {
@@ -132,7 +124,7 @@
   <h2>Place an Order</h2>
 
   <p>
-    Please submit your order request below. Orders are reviewed for availability,
+    Submit an order request below. Orders are reviewed for availability,
     pricing, and delivery details before confirmation.
   </p>
 
@@ -151,10 +143,10 @@
     <textarea id="details" rows="5" required
       placeholder="Items, quantities, preferred date, and any notes"></textarea>
 
-    <!-- AGREEMENT (CORRECT POSITION) -->
+    <!-- AGREEMENT — FIXED POSITION & ALIGNMENT -->
     <div class="agreement">
-      <input type="checkbox" required>
-      <label>
+      <input type="checkbox" id="agree" required>
+      <label for="agree">
         I understand that orders must be placed at least
         <strong>48 hours in advance</strong>. Once my order is confirmed,
         all payments are <strong>non-refundable</strong>.
@@ -162,7 +154,6 @@
       </label>
     </div>
 
-    <!-- PAYMENT INFO -->
     <p style="margin-top: 1.5rem;">
       <strong>Payment:</strong><br>
       Venmo only – <strong>@SugarPetalBaking</strong><br>
@@ -187,4 +178,3 @@
 
 </body>
 </html>
-
