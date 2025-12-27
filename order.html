@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sugar Petal | Order</title>
+  <title>Order | Sugar Petal</title>
 
   <style>
     body {
@@ -20,10 +20,10 @@
     }
 
     header img {
-      width: 140px;
+      width: 160px;
       height: auto;
+      margin-bottom: 1rem;
       border-radius: 50%;
-      margin-bottom: 0.75rem;
     }
 
     nav {
@@ -52,34 +52,18 @@
       font-family: Georgia, serif;
     }
 
-    label {
-      display: block;
-      margin-top: 1.2rem;
-      font-weight: bold;
+    form p {
+      margin-bottom: 1rem;
     }
 
     input,
     textarea {
       width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.4rem;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-family: inherit;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    /* AGREEMENT — FIXED POSITION & ALIGNMENT */
-    .agreement {
-      margin-top: 1.2rem;
-      font-size: 0.95rem;
-    }
-
-    .agreement input {
-      margin-right: 0.5rem;
     }
 
     button {
@@ -90,7 +74,20 @@
       font-size: 1rem;
       border-radius: 25px;
       cursor: pointer;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    /* AGREEMENT FIX */
+    .agreement {
+      margin-top: 1.25rem;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
+
+    .agreement label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
 
     footer {
@@ -119,54 +116,69 @@
 </nav>
 
 <main>
+  <section>
+    <h2>Place an Order</h2>
 
-  <h2>Place an Order</h2>
+    <form>
+      <p>
+        <label>
+          Name:<br>
+          <input type="text" required>
+        </label>
+      </p>
 
-  <p>
-    Submit an order request below. Orders are reviewed for availability,
-    pricing, and delivery details before confirmation.
-  </p>
+      <p>
+        <label>
+          Email:<br>
+          <input type="email" required>
+        </label>
+      </p>
 
-  <form>
+      <p>
+        <label>
+          Order Details:<br>
+          <textarea rows="5" required></textarea>
+        </label>
+      </p>
 
-    <label for="name">Full Name</label>
-    <input type="text" id="name" required>
+      <p>
+        <label>
+          Delivery Address:<br>
+          <textarea rows="3" required></textarea>
+        </label>
+      </p>
 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" required>
+      <!-- AGREEMENT -->
+      <p class="agreement">
+        <label>
+          <input type="checkbox" required>
+          I understand that orders must be placed at least 48 hours in advance.
+          Once my order is confirmed, all payments are non-refundable.
+          No cancellations, returns, or refunds are accepted.
+        </label>
+      </p>
 
-    <label for="details">Order Details</label>
-    <textarea id="details" rows="5" required></textarea>
+      <button type="submit">Submit Order</button>
+    </form>
 
-    <!-- AGREEMENT — NOW DIRECTLY UNDER FORM -->
-    <div class="agreement">
-      <label>
-        <input type="checkbox" required>
-        I understand that orders must be placed at least 48 hours in advance.
-        Once my order is confirmed, all payments are non-refundable.
-        No cancellations, returns, or refunds are accepted.
-      </label>
-    </div>
-
-    <p style="margin-top: 1.5rem;">
+    <p style="margin-top:1.5rem;">
       <strong>Payment:</strong><br>
       Venmo only – <strong>@SugarPetalBaking</strong><br>
+      Please include your name and order item in the payment note.<br>
       Orders are confirmed once payment is received.
     </p>
-
-    <button type="submit">Submit Order Request</button>
-
-  </form>
-
+  </section>
 </main>
 
 <footer>
   <p>
-    Orders must be placed at least 48 hours in advance.<br>
-    All sales are final. Payments are non-refundable once confirmed.
+    Orders must be placed at least <strong>48 hours in advance</strong>.<br>
+    All sales are final. Payments are non-refundable once an order is confirmed.
   </p>
+
   <p>© 2025 Sugar Petal Baking</p>
 </footer>
 
 </body>
 </html>
+
