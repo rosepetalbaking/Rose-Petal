@@ -14,8 +14,8 @@
     }
 
     header {
-      background: #f5c2b8;
-      padding: 1.5rem 1rem;
+      background: #f3b6c4;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
@@ -25,7 +25,7 @@
     }
 
     nav {
-      background: #f8ddd5;
+      background: #f7d6de;
       padding: 1rem;
       text-align: center;
     }
@@ -38,17 +38,16 @@
     }
 
     main {
-      max-width: 700px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: auto;
       padding: 2rem;
       background: white;
-      border-radius: 8px;
     }
 
     h2 {
-      font-family: Georgia, serif;
-      border-bottom: 2px solid #f5c2b8;
+      border-bottom: 2px solid #f3b6c4;
       padding-bottom: 0.5rem;
+      font-family: Georgia, serif;
     }
 
     form {
@@ -61,36 +60,37 @@
       font-weight: bold;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
       padding: 0.6rem;
       margin-top: 0.4rem;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-family: Arial, sans-serif;
+      font-family: inherit;
     }
 
     textarea {
       resize: vertical;
     }
 
-    /* CHECKBOX FIX */
-    .checkbox {
+    /* AGREEMENT SECTION */
+    .agreement {
       display: flex;
-      gap: 0.75rem;
       align-items: flex-start;
+      gap: 0.6rem;
       margin-top: 1.5rem;
       font-size: 0.95rem;
     }
 
-    .checkbox input {
+    .agreement input {
       margin-top: 0.25rem;
     }
 
     button {
       margin-top: 1.5rem;
       padding: 0.7rem 1.5rem;
-      background: #f5c2b8;
+      background: #f3b6c4;
       border: none;
       border-radius: 5px;
       font-size: 1rem;
@@ -100,13 +100,13 @@
     }
 
     button:hover {
-      background: #e8a99e;
+      background: #e7a8b7;
     }
 
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: #f8ddd5;
+      background: #f7d6de;
       margin-top: 2rem;
       font-size: 0.9rem;
     }
@@ -117,7 +117,7 @@
 
 <header>
   <h1>Sugar Petal</h1>
-  <p>Place an Order</p>
+  <p>Order Request</p>
 </header>
 
 <nav>
@@ -129,11 +129,11 @@
 
 <main>
 
-  <h2>Order Request Form</h2>
+  <h2>Place an Order</h2>
 
   <p>
-    Please complete the form below to request an order.  
-    Orders are reviewed for availability, pricing, and delivery details before confirmation.
+    Please submit your order request below. Orders are reviewed for availability,
+    pricing, and delivery details before confirmation.
   </p>
 
   <form>
@@ -148,23 +148,27 @@
     <input type="tel" id="phone" required>
 
     <label for="details">Order Details</label>
-    <textarea id="details" rows="5" placeholder="Items, quantities, preferred date, and any notes" required></textarea>
+    <textarea id="details" rows="5" required
+      placeholder="Items, quantities, preferred date, and any notes"></textarea>
 
-    <p style="margin-top: 1.5rem;">
-      <strong>Payment:</strong><br>
-      Venmo only – <strong>@SugarPetalBaking</strong><br>
-      Final pricing will be provided after order review.
-      Orders are confirmed once payment is received.
-    </p>
-
-    <div class="checkbox">
+    <!-- AGREEMENT (CORRECT POSITION) -->
+    <div class="agreement">
       <input type="checkbox" required>
       <label>
-        I agree that orders must be placed at least <strong>48 hours in advance</strong>.
-        All payments are <strong>non-refundable</strong> once an order is confirmed.
+        I understand that orders must be placed at least
+        <strong>48 hours in advance</strong>. Once my order is confirmed,
+        all payments are <strong>non-refundable</strong>.
         No cancellations, returns, or refunds are accepted.
       </label>
     </div>
+
+    <!-- PAYMENT INFO -->
+    <p style="margin-top: 1.5rem;">
+      <strong>Payment:</strong><br>
+      Venmo only – <strong>@SugarPetalBaking</strong><br>
+      Final pricing will be provided after review.
+      Orders are confirmed once payment is received.
+    </p>
 
     <button type="submit">Submit Order Request</button>
 
