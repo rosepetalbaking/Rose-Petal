@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Order | Sugar Petal</title>
 
   <style>
@@ -33,7 +33,7 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 600px;
       margin: auto;
       padding: 2rem;
       background: white;
@@ -43,11 +43,18 @@
       border-bottom: 2px solid #f3b6c4;
       padding-bottom: 0.5rem;
       font-family: Georgia, serif;
+      text-align: center;
     }
 
-    input, textarea {
+    form p {
+      margin-bottom: 1rem;
+    }
+
+    input,
+    textarea {
       width: 100%;
       padding: 0.5rem;
+      margin-top: 0.25rem;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-family: inherit;
@@ -61,14 +68,24 @@
       font-size: 1rem;
       border-radius: 25px;
       cursor: pointer;
-      margin-top: 1rem;
+      display: block;
+      margin: 1.5rem auto 0;
+    }
+
+    .note {
+      background: #fffaf7;
+      border-left: 4px solid #f3b6c4;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.95rem;
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       background: #f7d6de;
       margin-top: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -81,7 +98,7 @@
 </header>
 
 <nav>
-  <a href="index.html">About</a>
+  <a href="index.html">Home</a>
   <a href="menu.html">Menu</a>
   <a href="order.html">Order</a>
   <a href="contact.html">Contact</a>
@@ -90,50 +107,65 @@
 <main>
   <h2>Place an Order</h2>
 
-  <p>
-    Please fill out the form below to place your order.
-    Orders are handmade and require advance notice.
-  </p>
-
   <form>
     <p>
-      <label>Name:<br>
-        <input type="text" required>
+      <label>
+        Name:<br />
+        <input type="text" required />
       </label>
     </p>
 
     <p>
-      <label>Email:<br>
-        <input type="email" required>
+      <label>
+        Email:<br />
+        <input type="email" required />
       </label>
     </p>
 
     <p>
-      <label>Order Details:<br>
+      <label>
+        Order Details:<br />
         <textarea rows="5" required></textarea>
       </label>
     </p>
 
     <p>
-      <label>Delivery Address:<br>
+      <label>
+        Delivery Address:<br />
         <textarea rows="3" required></textarea>
       </label>
     </p>
 
-    <button type="submit">Submit Order</button>
+    <button type="submit">Submit Order Request</button>
   </form>
 
-  <p style="margin-top: 2rem;">
-    <strong>Payment:</strong><br>
-    Venmo only – <strong>@SugarPetalBaking</strong><br>
-    Please include your name and order item in the payment note.<br>
-    Orders are confirmed once payment is received.
-  </p>
+  <div class="note">
+    <p>
+      <strong>Payment:</strong><br />
+      Venmo only — <strong>@SugarPetalBaking</strong><br />
+      Please include your name and ordered item in the payment note.
+    </p>
+
+    <p>
+      <strong>Important:</strong><br />
+      • Orders must be placed at least <strong>48 hours in advance</strong><br />
+      • Orders are confirmed once payment is received<br />
+      • All sales are <strong>final</strong> — no refunds or returns
+    </p>
+
+    <p>
+      <strong>Delivery only.</strong> Local pickup is unavailable.
+    </p>
+  </div>
 </main>
 
 <footer>
-  © 2025 Sugar Petal
+  <p>© 2025 Sugar Petal</p>
+  <p>
+    Orders require 48 hours notice • Payment is non-refundable once confirmed
+  </p>
 </footer>
 
 </body>
 </html>
+``
