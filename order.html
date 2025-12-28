@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Order | Sugar Petal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sugar Petal | Order</title>
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #FFF1EB; /* soft warm cream */
+      margin: 0;
+      background: #FFF1EB;
       color: #4a2c2a;
     }
 
     header {
-      background-color: #F6C1CF; /* petal pink */
+      background: #F6C1CF;
       padding: 2rem 1rem;
       text-align: center;
     }
 
     header img {
-      width: 160px; /* LOGO SIZE */
+      width: 150px; /* LOGO SIZE */
       height: auto;
       border-radius: 50%;
-      display: block;
-      margin: 0 auto 0.5rem;
+      margin-bottom: 0.5rem;
     }
 
     nav {
-      background-color: #FAD4C0; /* peach blush */
+      background: #FAD4C0;
       padding: 1rem;
       text-align: center;
     }
@@ -40,10 +40,10 @@
     }
 
     main {
-      max-width: 900px;
-      margin: auto;
+      max-width: 700px;
+      margin: 2rem auto;
       padding: 2rem;
-      background-color: white;
+      background: white;
     }
 
     h2 {
@@ -55,22 +55,19 @@
 
     label {
       display: block;
-      margin-top: 1rem;
+      margin-top: 1.2rem;
+      font-weight: bold;
     }
 
     input,
     textarea {
       width: 100%;
       padding: 0.6rem;
-      margin-top: 0.25rem;
+      margin-top: 0.4rem;
       border-radius: 6px;
       border: 1px solid #e1b2bc;
-      box-sizing: border-box;
       font-family: inherit;
-    }
-
-    textarea {
-      resize: vertical;
+      box-sizing: border-box;
     }
 
     .agreement {
@@ -79,44 +76,39 @@
       gap: 0.5rem;
       margin-top: 1rem;
       font-size: 0.95rem;
-      text-align: left;
     }
 
     .agreement input {
-      margin-top: 0.2rem;
+      margin-top: 0.25rem;
     }
 
     button {
-      margin-top: 1.5rem;
+      margin-top: 1.8rem;
       width: 100%;
-      padding: 0.75rem;
-      background-color: #F6C1CF;
+      padding: 0.8rem;
+      background: #F6C1CF;
+      color: #4a2c2a;
       border: none;
       border-radius: 25px;
       font-size: 1rem;
-      color: #4a2c2a;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #e9a6b5;
+      background: #e9a6b5;
     }
 
-    .payment-info {
-      margin-top: 2rem;
+    .payment-note {
+      margin-top: 1.5rem;
       font-size: 0.95rem;
-      background: #FFF7F3;
-      padding: 1rem;
-      border-left: 4px solid #F6C1CF;
-      border-radius: 4px;
     }
 
     footer {
-      background-color: #FAD4C0;
       text-align: center;
       padding: 1.5rem;
-      font-size: 0.9rem;
+      background: #FAD4C0;
       margin-top: 2rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -140,21 +132,17 @@
   <h2>Place an Order</h2>
 
   <form>
-    <label>Name
-      <input type="text" required>
-    </label>
+    <label>Name</label>
+    <input type="text" required>
 
-    <label>Email
-      <input type="email" required>
-    </label>
+    <label>Email</label>
+    <input type="email" required>
 
-    <label>Order Details
-      <textarea rows="4" required></textarea>
-    </label>
+    <label>Order Details</label>
+    <textarea rows="4" required></textarea>
 
-    <label>Preferred Delivery Date
-      <input type="date" required>
-    </label>
+    <label>Preferred Delivery Date</label>
+    <input type="date" required>
 
     <div class="agreement">
       <input type="checkbox" required>
@@ -168,12 +156,12 @@
     <button type="submit">Submit Order</button>
   </form>
 
-  <div class="payment-info">
-    <strong>Payment Method</strong><br>
+  <p class="payment-note">
+    <strong>Payment:</strong><br>
     Venmo only — <strong>@SugarPetalBaking</strong><br>
     Please include your name and order item in the payment note.<br>
     Orders are confirmed once payment is received.
-  </div>
+  </p>
 </main>
 
 <footer>
