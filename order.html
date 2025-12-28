@@ -9,25 +9,25 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #FBF6F1; /* same as index */
+      background: #FBF6F1;
       color: #4a2c2a;
     }
 
     header {
-      background: #EAC2B8; /* same as index */
+      background: #EAC2B8;
       padding: 2rem 1rem;
       text-align: center;
     }
 
     header img {
-      width: 160px; /* slightly bigger, controlled */
+      width: 160px;
       height: auto;
       border-radius: 50%;
       margin-bottom: 0.5rem;
     }
 
     nav {
-      background: #F1D5C9; /* same as index */
+      background: #F1D5C9;
       padding: 1rem;
       text-align: center;
     }
@@ -44,11 +44,12 @@
       margin: 40px auto;
       padding: 2rem;
       background: #FFFFFF;
+      text-align: left; /* IMPORTANT */
     }
 
     h2 {
       text-align: center;
-      border-bottom: 2px solid #D8A39D; /* same as index */
+      border-bottom: 2px solid #D8A39D;
       padding-bottom: 0.5rem;
       font-family: Georgia, serif;
     }
@@ -74,17 +75,20 @@
       resize: vertical;
     }
 
+    /* 🔒 AGREEMENT — LOCKED LEFT */
     .agreement {
       display: flex;
       align-items: flex-start;
       gap: 10px;
       margin-top: 20px;
       font-size: 14px;
+      width: 100%;
       text-align: left;
     }
 
     .agreement input {
       margin-top: 3px;
+      flex-shrink: 0;
     }
 
     button {
@@ -104,9 +108,9 @@
     }
 
     footer {
+      background: #F1D5C9;
       text-align: center;
       padding: 1.5rem;
-      background: #F1D5C9;
       margin-top: 40px;
       font-size: 0.9rem;
     }
@@ -132,17 +136,17 @@
   <h2>Place an Order</h2>
 
   <form>
-    <label for="name">Name</label>
-    <input id="name" type="text" required>
+    <label>Name</label>
+    <input type="text" required>
 
-    <label for="email">Email</label>
-    <input id="email" type="email" required>
+    <label>Email</label>
+    <input type="email" required>
 
-    <label for="details">Order Details</label>
-    <textarea id="details" rows="4" required></textarea>
+    <label>Order Details</label>
+    <textarea rows="4" required></textarea>
 
-    <label for="date">Preferred Pickup Date</label>
-    <input id="date" type="date" required>
+    <label>Preferred Pickup Date</label>
+    <input type="date" required>
 
     <div class="agreement">
       <input type="checkbox" required>
