@@ -7,27 +7,27 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #FFF1EB;
+      font-family: Arial, sans-serif;
+      background: #FBF6F1; /* same as index */
       color: #4a2c2a;
     }
 
     header {
-      background: #F6C1CF;
+      background: #EAC2B8; /* same as index */
       padding: 2rem 1rem;
       text-align: center;
     }
 
     header img {
-      width: 150px; /* LOGO SIZE */
+      width: 160px; /* slightly bigger, controlled */
       height: auto;
       border-radius: 50%;
       margin-bottom: 0.5rem;
     }
 
     nav {
-      background: #FAD4C0;
+      background: #F1D5C9; /* same as index */
       padding: 1rem;
       text-align: center;
     }
@@ -40,74 +40,74 @@
     }
 
     main {
-      max-width: 700px;
-      margin: 2rem auto;
+      max-width: 600px;
+      margin: 40px auto;
       padding: 2rem;
-      background: white;
+      background: #FFFFFF;
     }
 
     h2 {
-      border-bottom: 2px solid #E7A9B7;
+      text-align: center;
+      border-bottom: 2px solid #D8A39D; /* same as index */
       padding-bottom: 0.5rem;
       font-family: Georgia, serif;
-      text-align: center;
     }
 
     label {
       display: block;
-      margin-top: 1.2rem;
+      margin-top: 15px;
       font-weight: bold;
     }
 
     input,
     textarea {
       width: 100%;
-      padding: 0.6rem;
-      margin-top: 0.4rem;
-      border-radius: 6px;
-      border: 1px solid #e1b2bc;
-      font-family: inherit;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #D8A39D;
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
     }
 
     .agreement {
       display: flex;
       align-items: flex-start;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      font-size: 0.95rem;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: left;
     }
 
     .agreement input {
-      margin-top: 0.25rem;
+      margin-top: 3px;
     }
 
     button {
-      margin-top: 1.8rem;
+      margin-top: 25px;
       width: 100%;
-      padding: 0.8rem;
-      background: #F6C1CF;
-      color: #4a2c2a;
+      padding: 12px;
+      background: #EAC2B8;
       border: none;
-      border-radius: 25px;
-      font-size: 1rem;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #4a2c2a;
       cursor: pointer;
     }
 
     button:hover {
-      background: #e9a6b5;
-    }
-
-    .payment-note {
-      margin-top: 1.5rem;
-      font-size: 0.95rem;
+      background: #D8A39D;
     }
 
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: #FAD4C0;
-      margin-top: 2rem;
+      background: #F1D5C9;
+      margin-top: 40px;
       font-size: 0.9rem;
     }
   </style>
@@ -132,17 +132,17 @@
   <h2>Place an Order</h2>
 
   <form>
-    <label>Name</label>
-    <input type="text" required>
+    <label for="name">Name</label>
+    <input id="name" type="text" required>
 
-    <label>Email</label>
-    <input type="email" required>
+    <label for="email">Email</label>
+    <input id="email" type="email" required>
 
-    <label>Order Details</label>
-    <textarea rows="4" required></textarea>
+    <label for="details">Order Details</label>
+    <textarea id="details" rows="4" required></textarea>
 
-    <label>Preferred Delivery Date</label>
-    <input type="date" required>
+    <label for="date">Preferred Pickup Date</label>
+    <input id="date" type="date" required>
 
     <div class="agreement">
       <input type="checkbox" required>
@@ -155,13 +155,6 @@
 
     <button type="submit">Submit Order</button>
   </form>
-
-  <p class="payment-note">
-    <strong>Payment:</strong><br>
-    Venmo only — <strong>@SugarPetalBaking</strong><br>
-    Please include your name and order item in the payment note.<br>
-    Orders are confirmed once payment is received.
-  </p>
 </main>
 
 <footer>
